@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Nov 11 17:15:21 2020
+Simple NLP analysis of USA presidential elect speeches
 
-@author: jtobayashi
 """
 
 
@@ -172,6 +171,7 @@ class speech():
         self.wc = WordCloud(background_color='white',
                             scale=5,
                             mask=usa_mask).fit_words(self.fdist)
+        plt.figure(figsize=(8, 6), dpi=200)
         plt.imshow(self.wc, interpolation='bilinear')
         plt.title(title, fontsize=13, **gsfont)
         plt.axis("off")
