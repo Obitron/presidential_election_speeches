@@ -178,7 +178,7 @@ class speech():
         
         if save!=None: 
             if type(save)==str: 
-                plt.savefig(save)
+                plt.savefig(save,bbox_inches='tight')
             else: 
                 print("Error in saving plot.  Could not resolve save arg")
         
